@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="React + CSS (no bundler) template" />
+    <title>01 React + CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Import maps let the browser resolve bare imports like "react" -->
+    <script type="importmap">
+        {
+          "imports": {
+            "react": "https://esm.sh/react@18.3.1",
+            "react-dom/client": "https://esm.sh/react-dom@18.3.1/client"
+          }
+        }
+    </script>
+
+    <script type="module" src="./js/app.js" defer></script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Home">
+            <span class="brand-mark" aria-hidden="true">◆</span>
+            <span class="brand-text">01-react-css</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+            <a class="nav-link" href="#main">App</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main" class="site-main container" role="main">
+    <div id="root"></div>
+    <noscript>This page requires JavaScript enabled.</noscript>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+        <small>© <span id="year"></span> React + CSS</small>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
